@@ -641,22 +641,32 @@ picture {
 
 /* line 46, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-middle {
-  height: 280px;
+  height: 300px;
 }
 
-/* line 55, src/scss/_components/_home.scss */
+/* line 50, src/scss/_components/_home.scss */
+.home__content--ncenter .home__content-top {
+  min-height: 200px;
+}
+
+/* line 54, src/scss/_components/_home.scss */
+.home__content--ncenter .home__content-bottom {
+  padding-top: 50px;
+}
+
+/* line 57, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-bottom img {
   position: relative;
   left: 40px;
 }
 
-/* line 63, src/scss/_components/_home.scss */
+/* line 65, src/scss/_components/_home.scss */
 .home__content-top, .home__content-bottom {
   height: -webkit-calc((100vh - 350px) / 2);
   height: calc((100vh - 350px) / 2);
 }
 
-/* line 67, src/scss/_components/_home.scss */
+/* line 69, src/scss/_components/_home.scss */
 .home__content-top img, .home__content-bottom img {
   display: block;
   max-width: 100%;
@@ -665,7 +675,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 76, src/scss/_components/_home.scss */
+/* line 78, src/scss/_components/_home.scss */
 .home__content-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -677,25 +687,25 @@ picture {
           align-items: flex-end;
 }
 
-/* line 81, src/scss/_components/_home.scss */
+/* line 83, src/scss/_components/_home.scss */
 .home__content-middle {
   height: 350px;
 }
 
-/* line 86, src/scss/_components/_home.scss */
+/* line 88, src/scss/_components/_home.scss */
 .home__badge, .home__title, .home__timer, .home__btn {
   text-align: center;
   font-family: 'Frankfurter', sans-serif;
 }
 
-/* line 94, src/scss/_components/_home.scss */
+/* line 96, src/scss/_components/_home.scss */
 .home__badge {
   color: #235f25;
   font-size: 20px;
   text-transform: uppercase;
 }
 
-/* line 100, src/scss/_components/_home.scss */
+/* line 102, src/scss/_components/_home.scss */
 .home__title {
   padding-bottom: 15px;
   color: #235f25;
@@ -704,7 +714,7 @@ picture {
   text-transform: uppercase;
 }
 
-/* line 108, src/scss/_components/_home.scss */
+/* line 110, src/scss/_components/_home.scss */
 .home__desc {
   padding-bottom: 30px;
   text-align: center;
@@ -712,7 +722,7 @@ picture {
   font-size: 18px;
 }
 
-/* line 115, src/scss/_components/_home.scss */
+/* line 117, src/scss/_components/_home.scss */
 .home__timer {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -721,7 +731,7 @@ picture {
   text-transform: uppercase;
 }
 
-/* line 123, src/scss/_components/_home.scss */
+/* line 125, src/scss/_components/_home.scss */
 .home__btn {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -752,7 +762,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 140, src/scss/_components/_home.scss */
+/* line 142, src/scss/_components/_home.scss */
 .home__btn:hover {
   background-color: #235f25;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -760,7 +770,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 145, src/scss/_components/_home.scss */
+/* line 147, src/scss/_components/_home.scss */
 .home__btn-wrapper {
   display: -webkit-box;
   display: -webkit-flex;

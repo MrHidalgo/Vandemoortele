@@ -44,14 +44,16 @@
 				}
 
 				&-middle {
-					height: 280px;
+					height: 300px;
 				}
 
 				&-top {
-
+					min-height: 200px;
 				}
 
 				&-bottom {
+					padding-top: 50px;
+
 					img {
 						position: relative;
 						left: 40px;

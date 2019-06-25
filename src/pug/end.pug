@@ -1,0 +1,60 @@
+---
+title: Vandemoortele | Game Over
+
+pageClassName: p-end
+---
+extends shared/_layout
+
+block header
+block footer
+block content
+	div.body.body--start(class!= pageClassName)
+
+		.home
+			.home__wrapper
+
+				.home__header
+
+					.c-grid
+
+						.home__header-wrapper
+
+							.logo
+								a.logo__btn(href="/" class="" title="")
+									img.logo__img(src="img/logo.svg" srcset="" alt="" title="")
+
+							.lang
+								a.lang__btn.is-active(href="#" class="" title="")
+									span!= "NL"
+
+								a.lang__btn(href="#" class="" title="")
+									span!= "FR"
+
+
+				.home__content.home__content--ncenter
+					.home__content-top
+						p.home__timer!= "<span>00</span>:<span>00</span>:<span>00</span>"
+
+					.home__content-middle
+						h1.home__title!= "Game over"
+						p.home__desc!= "Vous êtes tombé dans nos mayo-pièges et vous n’avez pas retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle. Retentez votre chance !"
+						.home__btn-wrapper
+							a.home__btn(href="#" class="" title="")!= "Je retente ma chance !"
+
+					.home__content-bottom
+						img(src="img/img-bottle-additional-1.png" srcset="img/img-bottle-additional-1@2x.png 2x" alt="" title="")
+
+
+				.home__footer
+
+					.c-grid
+
+						.home__footer-wrapper
+
+							.link
+								a.link__btn(href="#" class="" title="")!= "Mentions légales"
+								span!= "|"
+								a.link__btn(href="#" class="" title="")!= "Lorem ipsum"
+
+							.vers
+								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
