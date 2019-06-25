@@ -5,5 +5,11 @@ PageList:
   titleName: Home
   ready: 50
 - file: index-badge.html
-  titleName: Home with badge
+  titleName: Home with cookie
+  ready: 50
+- file: congrats.html
+  titleName: Congrats
+  ready: 50
+- file: congrats.html
+  titleName: Congrats
   ready: 50

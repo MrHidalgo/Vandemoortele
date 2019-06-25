@@ -626,7 +626,7 @@ picture {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
+  height: 100vh;
   max-height: 100vh;
   width: 100%;
   max-width: 630px;
@@ -634,13 +634,29 @@ picture {
   margin-right: auto;
 }
 
-/* line 38, src/scss/_components/_home.scss */
+/* line 41, src/scss/_components/_home.scss */
+.home__content--ncenter .home__content-top, .home__content--ncenter .home__content-bottom {
+  height: auto;
+}
+
+/* line 46, src/scss/_components/_home.scss */
+.home__content--ncenter .home__content-middle {
+  height: 280px;
+}
+
+/* line 55, src/scss/_components/_home.scss */
+.home__content--ncenter .home__content-bottom img {
+  position: relative;
+  left: 40px;
+}
+
+/* line 63, src/scss/_components/_home.scss */
 .home__content-top, .home__content-bottom {
   height: -webkit-calc((100vh - 350px) / 2);
   height: calc((100vh - 350px) / 2);
 }
 
-/* line 42, src/scss/_components/_home.scss */
+/* line 67, src/scss/_components/_home.scss */
 .home__content-top img, .home__content-bottom img {
   display: block;
   max-width: 100%;
@@ -649,7 +665,7 @@ picture {
   margin-right: auto;
 }
 
-/* line 51, src/scss/_components/_home.scss */
+/* line 76, src/scss/_components/_home.scss */
 .home__content-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -661,25 +677,25 @@ picture {
           align-items: flex-end;
 }
 
-/* line 56, src/scss/_components/_home.scss */
+/* line 81, src/scss/_components/_home.scss */
 .home__content-middle {
   height: 350px;
 }
 
-/* line 61, src/scss/_components/_home.scss */
-.home__badge, .home__title, .home__btn {
+/* line 86, src/scss/_components/_home.scss */
+.home__badge, .home__title, .home__timer, .home__btn {
   text-align: center;
   font-family: 'Frankfurter', sans-serif;
 }
 
-/* line 68, src/scss/_components/_home.scss */
+/* line 94, src/scss/_components/_home.scss */
 .home__badge {
   color: #235f25;
   font-size: 20px;
   text-transform: uppercase;
 }
 
-/* line 74, src/scss/_components/_home.scss */
+/* line 100, src/scss/_components/_home.scss */
 .home__title {
   padding-bottom: 15px;
   color: #235f25;
@@ -688,7 +704,7 @@ picture {
   text-transform: uppercase;
 }
 
-/* line 82, src/scss/_components/_home.scss */
+/* line 108, src/scss/_components/_home.scss */
 .home__desc {
   padding-bottom: 30px;
   text-align: center;
@@ -696,12 +712,21 @@ picture {
   font-size: 18px;
 }
 
-/* line 89, src/scss/_components/_home.scss */
+/* line 115, src/scss/_components/_home.scss */
+.home__timer {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  color: #006023;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* line 123, src/scss/_components/_home.scss */
 .home__btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -710,11 +735,12 @@ picture {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  max-width: 260px;
+  min-width: 260px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
   -webkit-border-radius: 28px;
           border-radius: 28px;
   background-color: #41ad4a;
@@ -726,12 +752,24 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 105, src/scss/_components/_home.scss */
+/* line 140, src/scss/_components/_home.scss */
 .home__btn:hover {
   background-color: #235f25;
   -webkit-transition: background-color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
+}
+
+/* line 145, src/scss/_components/_home.scss */
+.home__btn-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*# sourceMappingURL=maps/app.css.map */
