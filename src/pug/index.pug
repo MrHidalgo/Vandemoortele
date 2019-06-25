@@ -1,0 +1,39 @@
+---
+title: Vandemoortele
+
+pageClassName: p-home
+---
+extends shared/_layout
+
+block header
+block footer
+block content
+	div.body.body--start(class!= pageClassName)
+
+		.home
+			.home__wrapper
+
+				.home__header
+
+					.c-grid
+
+						.home__header-wrapper
+
+							.logo
+								a.logo__btn(href="/" class="" title="")
+									img.logo__img(src="img/logo.svg" srcset="" alt="" title="")
+
+							.lang
+								a.lang__btn.is-active(href="#" class="" title="")
+									span!= "NL"
+								a.lang__btn(href="#" class="" title="")
+									span!= "FR"
+
+				.home__footer
+
+					.c-grid
+
+						.home__footer-wrapper
+
+							.vers
+								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"

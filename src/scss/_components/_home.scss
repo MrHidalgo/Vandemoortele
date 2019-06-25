@@ -1,0 +1,28 @@
+// SECTION home :: START
+
+.home {
+	position: relative;
+
+	&__header,
+	&__footer {
+		position: fixed;
+		left: 0;
+		width: 100%;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__header {
+		top: 40px;
+	}
+
+	&__footer {
+		bottom: 54px;
+	}
+}
+
+// SECTION home :: END

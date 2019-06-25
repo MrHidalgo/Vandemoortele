@@ -1,0 +1,80 @@
+// COMMON :: START
+
+.lang {
+	display: flex;
+	align-items: center;
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		margin-left: 5px;
+		margin-right: 5px;
+		border-radius: 50%;
+		background-color: #dbd1b6;
+		color: #ffffff;
+		font-size: 14px;
+		font-family: 'Frankfurter', sans-serif;
+		@include transition(background-color);
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:hover {
+			background-color: rgba(#41ad4a, 0.75);
+			@include transition(background-color);
+		}
+
+		&.is-active {
+			background-color: #41ad4a;
+			@include transition(background-color);
+		}
+	}
+}
+
+.vers {
+	display: flex;
+
+	&__name {
+		display: flex;
+		align-items: center;
+		font-size: 18px;
+		color: #006023;
+
+		span {
+			font-weight: bold;
+		}
+
+		a {
+			overflow: hidden;
+			position: relative;
+			color: #006023;
+
+			&:hover {
+				&:after {
+					transform: translateY(500%);
+					@include transition(transform);
+				}
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				top: calc(100% - 4px);
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #006023;
+				@include transition(transform);
+			}
+		}
+	}
+}
+
+// COMMON :: END
