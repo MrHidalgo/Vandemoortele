@@ -3,4 +3,7 @@ ProjectTitle: Vandemoortele
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 50
+- file: index-badge.html
+  titleName: Home with badge
+  ready: 50

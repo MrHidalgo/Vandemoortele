@@ -65,5 +65,6 @@
 /// ===============
 @include mixinFontFace("Frankfurter", "Plain", "../fonts/", normal, woff2 woff ttf);
 @include mixinFontFace("HelveticaNeue", "Heavy", "../fonts/", 900, woff2 woff ttf);
+@include mixinFontFace("AmericanTypewriter", "", "../fonts/", normal, woff2 woff ttf);
 @include mixinFontFace("AmericanTypewriter", "-Bold", "../fonts/", bold, woff2 woff ttf);
 @include mixinFontFace("AmericanTypewriter", "-Light", "../fonts/", 300, woff2 woff ttf);

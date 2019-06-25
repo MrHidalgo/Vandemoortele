@@ -7,6 +7,13 @@ extends shared/_layout
 
 block header
 block footer
+block cookie
+	.cookie
+		.cookie__left
+			p!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida."
+		.cookie__right
+			a.cookie__btn(href="#" class="" title="")!= "ok"
+
 block content
 	div.body.body--start(class!= pageClassName)
 
