@@ -3,6 +3,17 @@
 .lang {
 	display: flex;
 	align-items: center;
+	@include adaptive(767) {
+		position: fixed;
+		top: 25px;
+		right: 15px;
+	}
+	@include adaptive(639) {
+		position: absolute;
+	}
+	@media screen and (max-width: 767px) and (orientation: landscape) {
+		position: absolute;
+	}
 
 	&__btn {
 		display: flex;
@@ -50,6 +61,9 @@
 		position: relative;
 		color: #006023;
 		font-size: 14px;
+		@include adaptive(639) {
+			font-size: 12px;
+		}
 
 		&-1 {
 			@include adaptive(1023) {
@@ -92,6 +106,12 @@
 		align-items: center;
 		font-size: 18px;
 		color: #006023;
+		@include adaptive(767) {
+			font-size: 14px;
+		}
+		@include adaptive(639) {
+			font-size: 12px;
+		}
 
 		span {
 			font-weight: bold;
@@ -128,21 +148,32 @@
 	z-index: 1000;
 	position: fixed;
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-between;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 130px;
+	min-height: 130px;
 	padding-left: 50px;
 	padding-right: 50px;
 	background-color: rgba(#235f25, 0.90);
+	@include adaptive(767) {
+		padding: 15px 30px;
+	}
+	@include adaptive(639) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
 	&__left {
 		flex: 1;
 		min-width: 1px;
 		max-width: 100%;
 		padding-right: 15px;
+		@include adaptive(639) {
+			padding-right: 0;
+		}
 	}
 
 	&__right {
@@ -150,6 +181,9 @@
 		justify-content: flex-end;
 		width: 100%;
 		max-width: 165px;
+		@include adaptive(639) {
+			justify-content: center;
+		}
 	}
 
 	p {
@@ -158,6 +192,13 @@
 		padding-right: 15px;
 		color: #ffffff;
 		font-size: 18px;
+		@include adaptive(639) {
+			font-size: 14px;
+		}
+		@include adaptive(639) {
+			text-align: center;
+			padding-bottom: 15px;
+		}
 	}
 
 	a {
@@ -175,6 +216,10 @@
 		text-transform: uppercase;
 		font-family: 'Frankfurter', sans-serif;
 		@include transition(background-color, color);
+		@include adaptive(639) {
+			font-size: 22px;
+			max-width: 135px;
+		}
 
 		&:hover {
 			background-color: transparent;

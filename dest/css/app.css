@@ -277,7 +277,30 @@ picture {
           align-items: center;
 }
 
-/* line 7, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_shared/_common.scss */
+  .lang {
+    position: fixed;
+    top: 25px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 3, src/scss/_shared/_common.scss */
+  .lang {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 3, src/scss/_shared/_common.scss */
+  .lang {
+    position: absolute;
+  }
+}
+
+/* line 18, src/scss/_shared/_common.scss */
 .lang__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -306,17 +329,17 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 22, src/scss/_shared/_common.scss */
+/* line 33, src/scss/_shared/_common.scss */
 .lang__btn:first-of-type {
   margin-left: 0;
 }
 
-/* line 25, src/scss/_shared/_common.scss */
+/* line 36, src/scss/_shared/_common.scss */
 .lang__btn:last-of-type {
   margin-right: 0;
 }
 
-/* line 29, src/scss/_shared/_common.scss */
+/* line 40, src/scss/_shared/_common.scss */
 .lang__btn:hover {
   background-color: rgba(65, 173, 74, 0.75);
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -324,7 +347,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 34, src/scss/_shared/_common.scss */
+/* line 45, src/scss/_shared/_common.scss */
 .lang__btn.is-active {
   background-color: #41ad4a;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -332,7 +355,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 41, src/scss/_shared/_common.scss */
+/* line 52, src/scss/_shared/_common.scss */
 .link {
   display: -webkit-box;
   display: -webkit-flex;
@@ -345,7 +368,7 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 41, src/scss/_shared/_common.scss */
+  /* line 52, src/scss/_shared/_common.scss */
   .link {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -353,7 +376,7 @@ picture {
   }
 }
 
-/* line 48, src/scss/_shared/_common.scss */
+/* line 59, src/scss/_shared/_common.scss */
 .link__btn {
   overflow: hidden;
   position: relative;
@@ -361,14 +384,21 @@ picture {
   font-size: 14px;
 }
 
+@media screen and (max-width: 639px) {
+  /* line 59, src/scss/_shared/_common.scss */
+  .link__btn {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-width: 1023px) {
-  /* line 54, src/scss/_shared/_common.scss */
+  /* line 68, src/scss/_shared/_common.scss */
   .link__btn-1 {
     width: 100%;
   }
 }
 
-/* line 61, src/scss/_shared/_common.scss */
+/* line 75, src/scss/_shared/_common.scss */
 .link__btn:hover:after {
   -webkit-transform: translateY(-3px);
       -ms-transform: translateY(-3px);
@@ -380,7 +410,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 67, src/scss/_shared/_common.scss */
+/* line 81, src/scss/_shared/_common.scss */
 .link__btn:after {
   content: '';
   position: absolute;
@@ -399,14 +429,14 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 80, src/scss/_shared/_common.scss */
+/* line 94, src/scss/_shared/_common.scss */
 .link span {
   margin-left: 10px;
   margin-right: 10px;
   color: #006023;
 }
 
-/* line 87, src/scss/_shared/_common.scss */
+/* line 101, src/scss/_shared/_common.scss */
 .vers {
   display: -webkit-box;
   display: -webkit-flex;
@@ -414,7 +444,7 @@ picture {
   display: flex;
 }
 
-/* line 90, src/scss/_shared/_common.scss */
+/* line 104, src/scss/_shared/_common.scss */
 .vers__name {
   display: -webkit-box;
   display: -webkit-flex;
@@ -428,19 +458,33 @@ picture {
   color: #006023;
 }
 
-/* line 96, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 104, src/scss/_shared/_common.scss */
+  .vers__name {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 104, src/scss/_shared/_common.scss */
+  .vers__name {
+    font-size: 12px;
+  }
+}
+
+/* line 116, src/scss/_shared/_common.scss */
 .vers__name span {
   font-weight: bold;
 }
 
-/* line 100, src/scss/_shared/_common.scss */
+/* line 120, src/scss/_shared/_common.scss */
 .vers__name a {
   overflow: hidden;
   position: relative;
   color: #006023;
 }
 
-/* line 106, src/scss/_shared/_common.scss */
+/* line 126, src/scss/_shared/_common.scss */
 .vers__name a:hover:after {
   -webkit-transform: translateY(100%);
       -ms-transform: translateY(100%);
@@ -452,7 +496,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 112, src/scss/_shared/_common.scss */
+/* line 132, src/scss/_shared/_common.scss */
 .vers__name a:after {
   content: '';
   position: absolute;
@@ -471,7 +515,7 @@ picture {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-/* line 127, src/scss/_shared/_common.scss */
+/* line 147, src/scss/_shared/_common.scss */
 .cookie {
   z-index: 1000;
   position: fixed;
@@ -479,10 +523,10 @@ picture {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -490,13 +534,39 @@ picture {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  min-height: 130px;
   padding-left: 50px;
   padding-right: 50px;
   background-color: rgba(35, 95, 37, 0.9);
 }
 
-/* line 141, src/scss/_shared/_common.scss */
+@media screen and (max-width: 767px) {
+  /* line 147, src/scss/_shared/_common.scss */
+  .cookie {
+    padding: 15px 30px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 147, src/scss/_shared/_common.scss */
+  .cookie {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 169, src/scss/_shared/_common.scss */
 .cookie__left {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -507,7 +577,14 @@ picture {
   padding-right: 15px;
 }
 
-/* line 148, src/scss/_shared/_common.scss */
+@media screen and (max-width: 639px) {
+  /* line 169, src/scss/_shared/_common.scss */
+  .cookie__left {
+    padding-right: 0;
+  }
+}
+
+/* line 179, src/scss/_shared/_common.scss */
 .cookie__right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -521,7 +598,17 @@ picture {
   max-width: 165px;
 }
 
-/* line 155, src/scss/_shared/_common.scss */
+@media screen and (max-width: 639px) {
+  /* line 179, src/scss/_shared/_common.scss */
+  .cookie__right {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 189, src/scss/_shared/_common.scss */
 .cookie p {
   width: 100%;
   max-width: 890px;
@@ -530,7 +617,22 @@ picture {
   font-size: 18px;
 }
 
-/* line 163, src/scss/_shared/_common.scss */
+@media screen and (max-width: 639px) {
+  /* line 189, src/scss/_shared/_common.scss */
+  .cookie p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 189, src/scss/_shared/_common.scss */
+  .cookie p {
+    text-align: center;
+    padding-bottom: 15px;
+  }
+}
+
+/* line 204, src/scss/_shared/_common.scss */
 .cookie a {
   display: -webkit-box;
   display: -webkit-flex;
@@ -560,7 +662,15 @@ picture {
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* line 179, src/scss/_shared/_common.scss */
+@media screen and (max-width: 639px) {
+  /* line 204, src/scss/_shared/_common.scss */
+  .cookie a {
+    font-size: 22px;
+    max-width: 135px;
+  }
+}
+
+/* line 224, src/scss/_shared/_common.scss */
 .cookie a:hover {
   background-color: transparent;
   color: #ffffff;
@@ -577,13 +687,29 @@ picture {
   display: flex;
 }
 
-/* line 6, src/scss/_macros/_logotype.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_macros/_logotype.scss */
+  .logo {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 3, src/scss/_macros/_logotype.scss */
+  .logo {
+    margin-top: 75px;
+  }
+}
+
+/* line 14, src/scss/_macros/_logotype.scss */
 .logo__btn {
   width: 200px;
   height: 87px;
 }
 
-/* line 11, src/scss/_macros/_logotype.scss */
+/* line 19, src/scss/_macros/_logotype.scss */
 .logo__img {
   display: block;
   max-width: 100%;
@@ -623,12 +749,53 @@ picture {
   top: 40px;
 }
 
-/* line 23, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 19, src/scss/_components/_home.scss */
+  .home__header {
+    position: static;
+  }
+}
+
+/* line 26, src/scss/_components/_home.scss */
 .home__footer {
   bottom: 54px;
 }
 
-/* line 27, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 26, src/scss/_components/_home.scss */
+  .home__footer {
+    bottom: 25px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 991px) {
+  /* line 26, src/scss/_components/_home.scss */
+  .home__footer {
+    bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 26, src/scss/_components/_home.scss */
+  .home__footer {
+    position: relative;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 26, src/scss/_components/_home.scss */
+  .home__footer {
+    position: relative;
+    bottom: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+/* line 48, src/scss/_components/_home.scss */
 .home__content {
   overflow: hidden;
   display: -webkit-box;
@@ -650,42 +817,115 @@ picture {
   max-width: 630px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* line 42, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 48, src/scss/_components/_home.scss */
+  .home__content {
+    overflow: unset;
+    height: -webkit-calc(100vh - 187px);
+    height: calc(100vh - 187px);
+    max-height: unset;
+    max-width: 510px;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 991px) {
+  /* line 48, src/scss/_components/_home.scss */
+  .home__content {
+    overflow: unset;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 48, src/scss/_components/_home.scss */
+  .home__content {
+    height: auto;
+    max-height: unset;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 48, src/scss/_components/_home.scss */
+  .home__content {
+    height: auto;
+    max-height: unset;
+  }
+}
+
+/* line 82, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-top, .home__content--ncenter .home__content-bottom {
   height: auto;
 }
 
-/* line 47, src/scss/_components/_home.scss */
+/* line 87, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-middle {
   height: 300px;
 }
 
-/* line 51, src/scss/_components/_home.scss */
+@media screen and (max-width: 639px) {
+  /* line 87, src/scss/_components/_home.scss */
+  .home__content--ncenter .home__content-middle {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 87, src/scss/_components/_home.scss */
+  .home__content--ncenter .home__content-middle {
+    height: auto;
+  }
+}
+
+/* line 97, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-top {
   min-height: 200px;
 }
 
-/* line 55, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 97, src/scss/_components/_home.scss */
+  .home__content--ncenter .home__content-top {
+    height: 80px;
+    min-height: unset;
+  }
+}
+
+/* line 105, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-bottom {
   padding-top: 50px;
 }
 
-/* line 58, src/scss/_components/_home.scss */
+/* line 108, src/scss/_components/_home.scss */
 .home__content--ncenter .home__content-bottom img {
   position: relative;
   left: 40px;
 }
 
-/* line 66, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 108, src/scss/_components/_home.scss */
+  .home__content--ncenter .home__content-bottom img {
+    left: 20px;
+  }
+}
+
+/* line 119, src/scss/_components/_home.scss */
 .home__content-top, .home__content-bottom {
   height: 100%;
   max-height: -webkit-calc((100vh - 350px) / 2);
   max-height: calc((100vh - 350px) / 2);
 }
 
-/* line 71, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 119, src/scss/_components/_home.scss */
+  .home__content-top, .home__content-bottom {
+    height: auto;
+    max-height: unset;
+  }
+}
+
+/* line 128, src/scss/_components/_home.scss */
 .home__content-top img, .home__content-bottom img {
   display: block;
   max-width: 100%;
@@ -694,12 +934,62 @@ picture {
   margin-right: auto;
 }
 
-/* line 81, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 137, src/scss/_components/_home.scss */
+  .home__content-top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 145, src/scss/_components/_home.scss */
+  .home__content-top img {
+    display: none;
+  }
+}
+
+/* line 152, src/scss/_components/_home.scss */
 .home__content-bottom {
   position: relative;
 }
 
-/* line 84, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 152, src/scss/_components/_home.scss */
+  .home__content-bottom {
+    height: -webkit-calc(100% - (80px + 350px));
+    height: calc(100% - (80px + 350px));
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 152, src/scss/_components/_home.scss */
+  .home__content-bottom {
+    height: auto;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 152, src/scss/_components/_home.scss */
+  .home__content-bottom {
+    height: auto;
+    padding-top: 50px;
+  }
+}
+
+/* line 166, src/scss/_components/_home.scss */
 .home__content-bottom img {
   position: absolute;
   bottom: 0;
@@ -707,18 +997,55 @@ picture {
   right: 0;
 }
 
-/* line 92, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 166, src/scss/_components/_home.scss */
+  .home__content-bottom img {
+    max-width: 247px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  /* line 166, src/scss/_components/_home.scss */
+  .home__content-bottom img {
+    max-width: 207px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 166, src/scss/_components/_home.scss */
+  .home__content-bottom img {
+    max-width: 207px;
+    position: relative;
+  }
+}
+
+/* line 185, src/scss/_components/_home.scss */
 .home__content-middle {
   height: 350px;
 }
 
-/* line 97, src/scss/_components/_home.scss */
+@media screen and (max-width: 639px) {
+  /* line 185, src/scss/_components/_home.scss */
+  .home__content-middle {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* line 185, src/scss/_components/_home.scss */
+  .home__content-middle {
+    height: auto;
+  }
+}
+
+/* line 196, src/scss/_components/_home.scss */
 .home__badge, .home__title, .home__timer, .home__btn {
   text-align: center;
   font-family: 'Frankfurter', sans-serif;
 }
 
-/* line 105, src/scss/_components/_home.scss */
+/* line 204, src/scss/_components/_home.scss */
 .home__badge {
   color: #235f25;
   text-transform: uppercase;
@@ -726,7 +1053,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 105, src/scss/_components/_home.scss */
+  /* line 204, src/scss/_components/_home.scss */
   .home__badge {
     font-size: -webkit-calc(16px + 4 * (100vw - 320px) / 1046);
     font-size: calc(16px + 4 * (100vw - 320px) / 1046);
@@ -734,13 +1061,13 @@ picture {
 }
 
 @media screen and (min-width: 1366px) {
-  /* line 105, src/scss/_components/_home.scss */
+  /* line 204, src/scss/_components/_home.scss */
   .home__badge {
     font-size: 20px;
   }
 }
 
-/* line 112, src/scss/_components/_home.scss */
+/* line 210, src/scss/_components/_home.scss */
 .home__title {
   padding-bottom: 15px;
   color: #235f25;
@@ -750,7 +1077,7 @@ picture {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 112, src/scss/_components/_home.scss */
+  /* line 210, src/scss/_components/_home.scss */
   .home__title {
     font-size: -webkit-calc(33px + 7 * (100vw - 320px) / 1046);
     font-size: calc(33px + 7 * (100vw - 320px) / 1046);
@@ -758,13 +1085,13 @@ picture {
 }
 
 @media screen and (min-width: 1366px) {
-  /* line 112, src/scss/_components/_home.scss */
+  /* line 210, src/scss/_components/_home.scss */
   .home__title {
     font-size: 40px;
   }
 }
 
-/* line 121, src/scss/_components/_home.scss */
+/* line 218, src/scss/_components/_home.scss */
 .home__desc {
   padding-bottom: 30px;
   text-align: center;
@@ -772,7 +1099,7 @@ picture {
   font-size: 18px;
 }
 
-/* line 128, src/scss/_components/_home.scss */
+/* line 225, src/scss/_components/_home.scss */
 .home__timer {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -781,7 +1108,15 @@ picture {
   text-transform: uppercase;
 }
 
-/* line 136, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 225, src/scss/_components/_home.scss */
+  .home__timer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+/* line 237, src/scss/_components/_home.scss */
 .home__btn {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -812,7 +1147,21 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 153, src/scss/_components/_home.scss */
+@media screen and (max-width: 767px) {
+  /* line 237, src/scss/_components/_home.scss */
+  .home__btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 237, src/scss/_components/_home.scss */
+  .home__btn {
+    font-size: 16px;
+  }
+}
+
+/* line 260, src/scss/_components/_home.scss */
 .home__btn:hover {
   background-color: #235f25;
   -webkit-transition: background-color 0.3s ease-in-out;
@@ -820,7 +1169,7 @@ picture {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* line 158, src/scss/_components/_home.scss */
+/* line 265, src/scss/_components/_home.scss */
 .home__btn-wrapper {
   display: -webkit-box;
   display: -webkit-flex;

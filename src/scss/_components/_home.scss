@@ -18,10 +18,31 @@
 
 	&__header {
 		top: 40px;
+		@include adaptive(767) {
+			position: static;
+		}
 	}
 
 	&__footer {
 		bottom: 54px;
+		@include adaptive(767) {
+			bottom: 25px;
+		}
+		@media screen and (orientation: landscape) and (max-width: 991px) {
+			bottom: 25px;
+		}
+		@include adaptive(639) {
+			position: relative;
+			bottom: 0;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		@media screen and (max-width: 767px) and (orientation: landscape) {
+			position: relative;
+			bottom: 0;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
 	}
 
 	&__content {
@@ -35,6 +56,25 @@
 		max-width: 630px;
 		margin-left: auto;
 		margin-right: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include adaptive(767) {
+			overflow: unset;
+			height: calc(100vh - 187px);
+			max-height: unset;
+			max-width: 510px;
+		}
+		@media screen and (orientation: landscape) and (max-width: 991px) {
+			overflow: unset;
+		}
+		@include adaptive(639) {
+			height: auto;
+			max-height: unset;
+		}
+		@media screen and (max-width: 767px) and (orientation: landscape) {
+			height: auto;
+			max-height: unset;
+		}
 
 		&--ncenter {
 
@@ -46,10 +86,20 @@
 
 				&-middle {
 					height: 300px;
+					@include adaptive(639) {
+						height: auto;
+					}
+					@media screen and (max-width: 767px) and (orientation: landscape) {
+						height: auto;
+					}
 				}
 
 				&-top {
 					min-height: 200px;
+					@include adaptive(767) {
+						height: 80px;
+						min-height: unset;
+					}
 				}
 
 				&-bottom {
@@ -58,6 +108,9 @@
 					img {
 						position: relative;
 						left: 40px;
+						@include adaptive(767) {
+							left: 20px;
+						}
 					}
 				}
 			}
@@ -67,6 +120,10 @@
 		&-bottom {
 			height: 100%;
 			max-height: calc((100vh - 350px) / 2);
+			@include adaptive(767) {
+				height: auto;
+				max-height: unset;
+			}
 
 			img {
 				display: block;
@@ -74,23 +131,65 @@
 				max-height: 100%;
 				margin-left: auto;
 				margin-right: auto;
+			}
+		}
 
+		&-top {
+			@include adaptive(767) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 80px;
+			}
+
+			img {
+				@include adaptive(767) {
+					display: none;
+				}
 			}
 		}
 
 		&-bottom {
 			position: relative;
+			@include adaptive(767) {
+				height: calc(100% - (80px + 350px));
+			}
+			@include adaptive(639) {
+				height: auto;
+				padding-top: 50px;
+			}
+			@media screen and (max-width: 767px) and (orientation: landscape) {
+				height: auto;
+				padding-top: 50px;
+			}
 
 			img {
 				position: absolute;
 				bottom: 0;
 				left: 0;
 				right: 0;
+				@include adaptive(767) {
+					max-width: 247px;
+				}
+				@include adaptive(639) {
+					max-width: 207px;
+					position: relative;
+				}
+				@media screen and (max-width: 767px) and (orientation: landscape) {
+					max-width: 207px;
+					position: relative;
+				}
 			}
 		}
 
 		&-middle {
 			height: 350px;
+			@include adaptive(639) {
+				height: auto;
+			}
+			@media screen and (max-width: 767px) and (orientation: landscape) {
+				height: auto;
+			}
 		}
 	}
 
@@ -104,7 +203,6 @@
 
 	&__badge {
 		color: #235f25;
-		//font-size: 20px;
 		text-transform: uppercase;
 		@include fluid(font-size, 320px, 1366px, 16px, 20px);
 	}
@@ -113,7 +211,6 @@
 		padding-bottom: 15px;
 		color: #235f25;
 		line-height: 1.2;
-		//font-size: 40px;
 		text-transform: uppercase;
 		@include fluid(font-size, 320px, 1366px, 33px, 40px);
 	}
@@ -131,6 +228,10 @@
 		color: #006023;
 		font-size: 20px;
 		text-transform: uppercase;
+		@include adaptive(767) {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
 	}
 
 	&__btn {
@@ -149,6 +250,12 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		@include transition(background-color);
+		@include adaptive(767) {
+			font-size: 18px;
+		}
+		@include adaptive(575) {
+			font-size: 16px;
+		}
 
 		&:hover {
 			background-color: #235f25;
