@@ -32,16 +32,16 @@
 			bottom: 25px;
 		}
 		@include adaptive(639) {
-			position: relative;
-			bottom: 0;
-			padding-top: 30px;
-			padding-bottom: 30px;
+			//position: relative;
+			//bottom: 0;
+			//padding-top: 30px;
+			//padding-bottom: 30px;
 		}
 		@media screen and (max-width: 767px) and (orientation: landscape) {
-			position: relative;
-			bottom: 0;
-			padding-top: 30px;
-			padding-bottom: 30px;
+			//position: relative;
+			//bottom: 0;
+			//padding-top: 30px;
+			//padding-bottom: 30px;
 		}
 	}
 
@@ -172,11 +172,9 @@
 					max-width: 247px;
 				}
 				@include adaptive(639) {
-					max-width: 207px;
 					position: relative;
 				}
 				@media screen and (max-width: 767px) and (orientation: landscape) {
-					max-width: 207px;
 					position: relative;
 				}
 			}
