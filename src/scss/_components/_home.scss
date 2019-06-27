@@ -25,6 +25,7 @@
 	}
 
 	&__content {
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -64,7 +65,8 @@
 
 		&-top,
 		&-bottom {
-			height: calc((100vh - 350px) / 2);
+			height: 100%;
+			max-height: calc((100vh - 350px) / 2);
 
 			img {
 				display: block;
@@ -72,12 +74,19 @@
 				max-height: 100%;
 				margin-left: auto;
 				margin-right: auto;
+
 			}
 		}
 
 		&-bottom {
-			display: flex;
-			align-items: flex-end;
+			position: relative;
+
+			img {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
 		}
 
 		&-middle {
@@ -95,16 +104,18 @@
 
 	&__badge {
 		color: #235f25;
-		font-size: 20px;
+		//font-size: 20px;
 		text-transform: uppercase;
+		@include fluid(font-size, 320px, 1366px, 16px, 20px);
 	}
 
 	&__title {
 		padding-bottom: 15px;
 		color: #235f25;
 		line-height: 1.2;
-		font-size: 40px;
+		//font-size: 40px;
 		text-transform: uppercase;
+		@include fluid(font-size, 320px, 1366px, 33px, 40px);
 	}
 
 	&__desc {

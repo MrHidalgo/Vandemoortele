@@ -41,12 +41,21 @@
 .link {
 	display: flex;
 	align-items: center;
+	@include adaptive(1023) {
+		flex-wrap: wrap;
+	}
 
 	&__btn {
 		overflow: hidden;
 		position: relative;
 		color: #006023;
 		font-size: 14px;
+
+		&-1 {
+			@include adaptive(1023) {
+				width: 100%;
+			}
+		}
 
 		&:hover {
 			&:after {
@@ -130,16 +139,17 @@
 	background-color: rgba(#235f25, 0.90);
 
 	&__left {
-		width: 100%;
-		max-width: 890px;
+		flex: 1;
+		min-width: 1px;
+		max-width: 100%;
+		padding-right: 15px;
 	}
 
 	&__right {
 		display: flex;
 		justify-content: flex-end;
-		flex: 1;
-		min-width: 1px;
-		max-width: 100%;
+		width: 100%;
+		max-width: 165px;
 	}
 
 	p {

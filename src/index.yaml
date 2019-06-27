@@ -10,9 +10,6 @@ PageList:
 - file: congrats.html
   titleName: Congrats
   ready: 50
-- file: congrats.html
-  titleName: Congrats
-  ready: 50
 - file: thanks.html
   titleName: Thanks
   ready: 50
