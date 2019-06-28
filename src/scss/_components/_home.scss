@@ -32,12 +32,14 @@
 			bottom: 25px;
 		}
 		@include adaptive(639) {
+			display: none;
 			//position: relative;
 			//bottom: 0;
 			//padding-top: 30px;
 			//padding-bottom: 30px;
 		}
 		@media screen and (max-width: 767px) and (orientation: landscape) {
+			display: none;
 			//position: relative;
 			//bottom: 0;
 			//padding-top: 30px;
@@ -81,7 +83,7 @@
 			.home__content {
 				&-top,
 				&-bottom {
-					height: auto;
+					height: 100%;
 				}
 
 				&-middle {
@@ -96,9 +98,11 @@
 
 				&-top {
 					min-height: 200px;
+					max-height: 250px;
 					@include adaptive(767) {
 						height: 80px;
 						min-height: unset;
+						max-height: unset;
 					}
 				}
 
@@ -106,7 +110,7 @@
 					padding-top: 50px;
 
 					img {
-						position: relative;
+						//position: relative;
 						left: 40px;
 						@include adaptive(767) {
 							left: 20px;
@@ -119,7 +123,7 @@
 		&-top,
 		&-bottom {
 			height: 100%;
-			max-height: calc((100vh - 350px) / 2);
+			//max-height: calc((100vh - 350px) / 2);
 			@include adaptive(767) {
 				height: auto;
 				max-height: unset;
@@ -168,6 +172,7 @@
 				bottom: 0;
 				left: 0;
 				right: 0;
+				max-height: calc(100% - 50px);
 				@include adaptive(767) {
 					max-width: 247px;
 				}
@@ -176,6 +181,23 @@
 				}
 				@media screen and (max-width: 767px) and (orientation: landscape) {
 					position: relative;
+				}
+			}
+
+			> div {
+				display: none;
+				align-items: center;
+				justify-content: space-between;
+				position: absolute;
+				bottom: 15px;
+				left: 0;
+				width: 100%;
+
+				@include adaptive(639) {
+					display: flex;
+				}
+				@media screen and (max-width: 767px) and (orientation: landscape) {
+					display: flex;
 				}
 			}
 		}
