@@ -31,17 +31,18 @@ block content
 									span!= "FR"
 
 
-				.home__content.home__content--ncenter
+				.home__content
 					.home__content-top
 						p.home__timer!= "<span>00</span>:<span>00</span>:<span>00</span>"
 
 					.home__content-middle
-						h1.home__title!= "Félicitations !"
-						p.home__desc!= "Vous n’êtes pas tombé dans nos mayo-pièges et avez retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle !"
-						.home__btn-wrapper
-							a.home__btn(href="#" class="" title="")!= "Je récupère ma récompense"
+						div
+							h1.home__title!= "Félicitations !"
+							p.home__desc!= "Vous n’êtes pas tombé dans nos mayo-pièges et avez retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle !"
+							.home__btn-wrapper
+								a.home__btn(href="#" class="" title="")!= "Je récupère ma récompense"
 
-					.home__content-bottom
+					.home__content-bottom.home__content-bottom--offsetImg
 						img(src="img/img-bottle-additional.png" srcset="img/img-bottle-additional@2x.png 2x" alt="" title="")
 
 						div
@@ -51,7 +52,7 @@ block content
 								a.link__btn.link__btn-1(href="#" class="" title="")!= "Lorem ipsum"
 
 							.vers
-								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
+								p.vers__name!= "<span>Vers</span><a href='#'>Vandemoortele.be</a>"
 
 				.home__footer
 
@@ -65,4 +66,4 @@ block content
 								a.link__btn.link__btn-1(href="#" class="" title="")!= "Lorem ipsum"
 
 							.vers
-								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
+								p.vers__name!= "<span>Vers</span><a href='#'>Vandemoortele.be</a>"

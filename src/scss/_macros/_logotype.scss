@@ -1,26 +1,5 @@
 // LOGOTYPE :: START
 
-.logo {
-	display: flex;
-	@include adaptive(767) {
-		margin-top: 100px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@include adaptive(639) {
-		margin-top: 75px;
-	}
 
-	&__btn {
-		width: 200px;
-		height: 87px;
-	}
-
-	&__img {
-		display: block;
-		max-width: 100%;
-		height: auto;
-	}
-}
 
 // LOGOTYPE :: END

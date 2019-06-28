@@ -36,12 +36,13 @@ block content
 						p.home__timer!= "<span>00</span>:<span>00</span>:<span>00</span>"
 
 					.home__content-middle
-						h1.home__title!= "Game over"
-						p.home__desc!= "Vous êtes tombé dans nos mayo-pièges et vous n’avez pas retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle. Retentez votre chance !"
-						.home__btn-wrapper
-							a.home__btn(href="#" class="" title="")!= "Je retente ma chance !"
+						div
+							h1.home__title!= "Game over"
+							p.home__desc!= "Vous êtes tombé dans nos mayo-pièges et vous n’avez pas retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle. Retentez votre chance !"
+							.home__btn-wrapper
+								a.home__btn(href="#" class="" title="")!= "Je retente ma chance !"
 
-					.home__content-bottom
+					.home__content-bottom.home__content-bottom--offsetImg
 						img(src="img/img-bottle-additional-1.png" srcset="img/img-bottle-additional-1@2x.png 2x" alt="" title="")
 
 						div
@@ -51,7 +52,7 @@ block content
 								a.link__btn.link__btn-1(href="#" class="" title="")!= "Lorem ipsum"
 
 							.vers
-								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
+								p.vers__name!= "<span>Vers</span><a href='#'>Vandemoortele.be</a>"
 
 				.home__footer
 

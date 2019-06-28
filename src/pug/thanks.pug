@@ -35,13 +35,14 @@ block content
 					.home__content-top
 
 					.home__content-middle
-						h4.home__badge!= "lorem ipsum"
-						h1.home__title!= "merci !"
-						p.home__desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua ut enim minim."
-						.home__btn-wrapper
-							a.home__btn(href="#" class="" title="")!= "Je partage !"
+						div
+							h4.home__badge!= "lorem ipsum"
+							h1.home__title!= "merci !"
+							p.home__desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua ut enim minim."
+							.home__btn-wrapper
+								a.home__btn(href="#" class="" title="")!= "Je partage !"
 
-					.home__content-bottom
+					.home__content-bottom.home__content-bottom--offsetImg
 						img(src="img/img-bottle-additional.png" srcset="img/img-bottle-additional@2x.png 2x" alt="" title="")
 
 						div
@@ -51,7 +52,7 @@ block content
 								a.link__btn.link__btn-1(href="#" class="" title="")!= "Lorem ipsum"
 
 							.vers
-								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
+								p.vers__name!= "<span>Vers</span><a href='#'>Vandemoortele.be</a>"
 
 				.home__footer
 
@@ -65,4 +66,4 @@ block content
 								a.link__btn.link__btn-1(href="#" class="" title="")!= "Lorem ipsum"
 
 							.vers
-								p.vers__name!= "<span>Vers</span>&nbsp;<a href='#'>Vandemoortele.be</a>"
+								p.vers__name!= "<span>Vers</span><a href='#'>Vandemoortele.be</a>"

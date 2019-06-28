@@ -1,18 +1,42 @@
 // COMMON :: START
 
+.logo {
+	display: flex;
+	@include adaptive(767) {
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (orientation: landscape) and (max-width: 812px) {
+		margin-top: 100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__btn {
+		width: 200px;
+		height: 87px;
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
 .lang {
 	display: flex;
 	align-items: center;
 	@include adaptive(767) {
-		position: fixed;
+		position: absolute;
 		top: 25px;
 		right: 15px;
 	}
-	@include adaptive(639) {
+	@media screen and (orientation: landscape) and (max-width: 812px) {
 		position: absolute;
-	}
-	@media screen and (max-width: 767px) and (orientation: landscape) {
-		position: absolute;
+		top: 25px;
+		right: 15px;
 	}
 
 	&__btn {
@@ -52,7 +76,10 @@
 .link {
 	display: flex;
 	align-items: center;
-	@include adaptive(1023) {
+	@include adaptive(767) {
+		flex-wrap: wrap;
+	}
+	@media screen and (orientation: landscape) and (max-width: 812px) {
 		flex-wrap: wrap;
 	}
 
@@ -61,12 +88,16 @@
 		position: relative;
 		color: #006023;
 		font-size: 14px;
-		@include adaptive(639) {
+		@include adaptive(1023) {
 			font-size: 12px;
+			text-align: left;
 		}
 
 		&-1 {
-			@include adaptive(1023) {
+			@include adaptive(767) {
+				width: 100%;
+			}
+			@media screen and (orientation: landscape) and (max-width: 812px) {
 				width: 100%;
 			}
 		}
@@ -106,11 +137,20 @@
 		align-items: center;
 		font-size: 18px;
 		color: #006023;
-		@include adaptive(767) {
-			font-size: 14px;
+		@include adaptive(1023) {
+			font-size: 16px;
 		}
-		@include adaptive(639) {
+		@include adaptive(767) {
+			flex-direction: column;
+			align-items: flex-end;
 			font-size: 12px;
+			text-align: right;
+		}
+		@media screen and (orientation: landscape) and (max-width: 812px) {
+			flex-direction: column;
+			align-items: flex-end;
+			font-size: 12px;
+			text-align: right;
 		}
 
 		span {
@@ -120,6 +160,7 @@
 		a {
 			overflow: hidden;
 			position: relative;
+			margin-left: 5px;
 			color: #006023;
 
 			&:hover {
@@ -158,12 +199,12 @@
 	padding-right: 50px;
 	background-color: rgba(#235f25, 0.90);
 	@include adaptive(767) {
-		padding: 15px 30px;
+		//padding: 15px 30px;
 	}
 	@include adaptive(639) {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		//flex-direction: column;
+		//align-items: center;
+		//justify-content: center;
 	}
 
 	&__left {
@@ -172,7 +213,7 @@
 		max-width: 100%;
 		padding-right: 15px;
 		@include adaptive(639) {
-			padding-right: 0;
+			//padding-right: 0;
 		}
 	}
 
@@ -182,7 +223,7 @@
 		width: 100%;
 		max-width: 165px;
 		@include adaptive(639) {
-			justify-content: center;
+			//justify-content: center;
 		}
 	}
 
@@ -193,11 +234,11 @@
 		color: #ffffff;
 		font-size: 18px;
 		@include adaptive(639) {
-			font-size: 14px;
+			//font-size: 14px;
 		}
 		@include adaptive(639) {
-			text-align: center;
-			padding-bottom: 15px;
+			//text-align: center;
+			//padding-bottom: 15px;
 		}
 	}
 
@@ -217,8 +258,8 @@
 		font-family: 'Frankfurter', sans-serif;
 		@include transition(background-color, color);
 		@include adaptive(639) {
-			font-size: 22px;
-			max-width: 135px;
+			//font-size: 22px;
+			//max-width: 135px;
 		}
 
 		&:hover {

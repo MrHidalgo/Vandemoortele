@@ -1,13 +1,38 @@
 // SECTION home :: START
 
 .home {
+	overflow: hidden;
 	position: relative;
+	height: 100vh;
+	max-height: 100vh;
+	@media screen and (max-width: 767px) and (max-height: 699px) {
+		overflow-y: auto;
+	}
+	@media screen and (max-width: 639px) {
+		overflow-y: auto;
+	}
+	@media screen and (orientation: landscape) and (max-width: 812px) {
+		overflow-y: auto;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 100%;
+	}
 
 	&__header,
 	&__footer {
+		z-index: 10;
 		position: fixed;
 		left: 0;
 		width: 100%;
+		@media screen and (max-width: 639px) {
+			position: relative;
+		}
+		@media screen and (orientation: landscape) and (max-width: 812px) {
+			position: relative;
+		}
 
 		&-wrapper {
 			display: flex;
@@ -17,171 +42,159 @@
 	}
 
 	&__header {
-		top: 40px;
+		top: 0;
+		padding-top: 40px;
 		@include adaptive(767) {
-			position: static;
+			padding-top: 0;
+		}
+		@media screen and (orientation: landscape) and (max-width: 812px) {
+			padding-top: 0;
 		}
 	}
 
 	&__footer {
-		bottom: 54px;
+		bottom: 0;
+		padding-bottom: 55px;
 		@include adaptive(767) {
-			bottom: 25px;
+			padding-bottom: 25px;
 		}
-		@media screen and (orientation: landscape) and (max-width: 991px) {
-			bottom: 25px;
-		}
-		@include adaptive(639) {
+		@media screen and (max-width: 639px) {
 			display: none;
-			//position: relative;
-			//bottom: 0;
-			//padding-top: 30px;
-			//padding-bottom: 30px;
 		}
-		@media screen and (max-width: 767px) and (orientation: landscape) {
+		@media screen and (orientation: landscape) and (max-width: 812px) {
 			display: none;
-			//position: relative;
-			//bottom: 0;
-			//padding-top: 30px;
-			//padding-bottom: 30px;
+			padding-bottom: 25px;
 		}
 	}
 
 	&__content {
-		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 100vh;
-		max-height: 100vh;
 		width: 100%;
 		max-width: 630px;
+		height: 100vh;
 		margin-left: auto;
 		margin-right: auto;
-		padding-left: 15px;
-		padding-right: 15px;
 		@include adaptive(767) {
-			overflow: unset;
-			height: calc(100vh - 187px);
-			max-height: unset;
 			max-width: 510px;
+			transform: translateY(187px);
+			height: calc(100vh - 187px);
 		}
-		@media screen and (orientation: landscape) and (max-width: 991px) {
-			overflow: unset;
-		}
-		@include adaptive(639) {
+		@media screen and (max-width: 639px) {
+			transform: translateY(0);
+			max-width: 100%;
 			height: auto;
-			max-height: unset;
+			padding-left: 15px;
+			padding-right: 15px;
 		}
-		@media screen and (max-width: 767px) and (orientation: landscape) {
+		@media screen and (orientation: landscape) and (max-width: 812px) {
+			transform: translateY(0);
+			max-width: 100%;
 			height: auto;
-			max-height: unset;
-		}
-
-		&--ncenter {
-
-			.home__content {
-				&-top,
-				&-bottom {
-					height: 100%;
-				}
-
-				&-middle {
-					height: 300px;
-					@include adaptive(639) {
-						height: auto;
-					}
-					@media screen and (max-width: 767px) and (orientation: landscape) {
-						height: auto;
-					}
-				}
-
-				&-top {
-					min-height: 200px;
-					max-height: 250px;
-					@include adaptive(767) {
-						height: 80px;
-						min-height: unset;
-						max-height: unset;
-					}
-				}
-
-				&-bottom {
-					padding-top: 50px;
-
-					img {
-						//position: relative;
-						left: 40px;
-						@include adaptive(767) {
-							left: 20px;
-						}
-					}
-				}
-			}
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 
 		&-top,
 		&-bottom {
-			height: 100%;
-			//max-height: calc((100vh - 350px) / 2);
-			@include adaptive(767) {
+			position: relative;
+			height: calc((100vh - 350px) / 2);
+			text-align: center;
+			@media screen and (max-width: 767px) and (max-height: 699px) {
 				height: auto;
-				max-height: unset;
 			}
 
 			img {
-				display: block;
-				max-width: 100%;
-				max-height: 100%;
-				margin-left: auto;
-				margin-right: auto;
+				z-index: -1;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				@media screen and (max-width: 767px) and (max-height: 699px) {
+					position: relative;
+				}
+				@media screen and (max-width: 639px) {
+					position: relative;
+				}
+				@media screen and (orientation: landscape) and (max-width: 812px) {
+					position: relative;
+				}
 			}
 		}
 
 		&-top {
+			max-height: 390px;
+			padding-bottom: 30px;
 			@include adaptive(767) {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				height: 80px;
+				max-height: unset;
+				padding-bottom: 0;
+			}
+			@media screen and (orientation: landscape) and (max-width: 812px) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 80px;
+				max-height: unset;
+				padding-bottom: 0;
 			}
 
 			img {
+				bottom: 0;
 				@include adaptive(767) {
+					display: none;
+				}
+				@media screen and (orientation: landscape) and (max-width: 812px) {
 					display: none;
 				}
 			}
 		}
 
+		&-middle {
+			display: flex;
+			align-items: center;
+			height: 350px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			@media screen and (max-width: 639px) {
+				height: auto;
+			}
+			@media screen and (orientation: landscape) and (max-width: 812px) {
+				height: auto;
+			}
+		}
+
 		&-bottom {
 			position: relative;
+			display: flex;
+			align-items: flex-end;
+			justify-content: center;
+			padding-top: 30px;
+			max-height: 313px;
 			@include adaptive(767) {
-				height: calc(100% - (80px + 350px));
+				height: calc(100% - (350px + 80px));
 			}
-			@include adaptive(639) {
+			@media screen and (max-width: 639px) {
 				height: auto;
-				padding-top: 50px;
 			}
-			@media screen and (max-width: 767px) and (orientation: landscape) {
-				height: auto;
-				padding-top: 50px;
+			@media screen and (orientation: landscape) and (max-width: 812px) {
+				height: calc(100% - (350px + 80px));
+			}
+
+			&--offsetImg {
+				max-height: 509px;
+
+				img {
+					transform: translateX(40px);
+				}
 			}
 
 			img {
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				max-height: calc(100% - 50px);
-				@include adaptive(767) {
-					max-width: 247px;
-				}
-				@include adaptive(639) {
-					position: relative;
-				}
-				@media screen and (max-width: 767px) and (orientation: landscape) {
-					position: relative;
-				}
+				top: 0;
 			}
 
 			> div {
@@ -192,23 +205,12 @@
 				bottom: 15px;
 				left: 0;
 				width: 100%;
-
 				@include adaptive(639) {
 					display: flex;
 				}
-				@media screen and (max-width: 767px) and (orientation: landscape) {
+				@media screen and (orientation: landscape) and (max-width: 812px) {
 					display: flex;
 				}
-			}
-		}
-
-		&-middle {
-			height: 350px;
-			@include adaptive(639) {
-				height: auto;
-			}
-			@media screen and (max-width: 767px) and (orientation: landscape) {
-				height: auto;
 			}
 		}
 	}
@@ -252,6 +254,10 @@
 			padding-top: 15px;
 			padding-bottom: 15px;
 		}
+		@media screen and (orientation: landscape) and (max-width: 812px) {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
 	}
 
 	&__btn {
@@ -270,11 +276,8 @@
 		font-size: 20px;
 		text-transform: uppercase;
 		@include transition(background-color);
-		@include adaptive(767) {
+		@include adaptive(639) {
 			font-size: 18px;
-		}
-		@include adaptive(575) {
-			font-size: 16px;
 		}
 
 		&:hover {
