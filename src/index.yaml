@@ -3,16 +3,16 @@ ProjectTitle: Vandemoortele
 PageList:
 - file: index.html
   titleName: Home
-  ready: 75
+  ready: 95
 - file: index-badge.html
   titleName: Home with cookie
-  ready: 75
+  ready: 95
 - file: congrats.html
   titleName: Congrats
-  ready: 75
+  ready: 95
 - file: thanks.html
   titleName: Thanks
-  ready: 75
+  ready: 95
 - file: end.html
   titleName: Game Over
-  ready: 75
+  ready: 95
