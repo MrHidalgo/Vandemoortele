@@ -8,7 +8,7 @@ extends shared/_layout
 block header
 block footer
 block content
-	div.body.body--start(class!= pageClassName)
+	.body.body--home.body--start(class!= pageClassName)
 
 		.home
 			.home__wrapper
@@ -33,18 +33,47 @@ block content
 
 				.home__content
 					.home__content-top
-						img(src="img/img-egg.png" srcset="img/img-egg@2x.png 2x" alt="" title="")
+						.home__content--home
+							img(src="img/img-egg.png" srcset="img/img-egg@2x.png 2x" alt="" title="")
+						.home__content--congrats
+							p.home__timer!= "<span>00</span>:<span>00</span>:<span>00</span>"
+						.home__content--end
+							p.home__timer!= "<span>00</span>:<span>00</span>:<span>00</span>"
 
 					.home__content-middle
 						div
-							h4.home__badge!= "concours"
-							h1.home__title!= "Retrouvez le bon goût d’une recette naturelle"
-							p.home__desc!= "Placez uniquement les bons ingrédients pour retrouver la vraie recette de la Mayonnaise Vandemoortele et gagnez lorem ipsum dolor sit amet! Consectetur adipiscing elit, sed tempor incididunt ut labore."
-							.home__btn-wrapper
-								a.home__btn(href="#" class="" title="")!= "Je joue !"
+							.home__content--home
+								h4.home__badge!= "concours"
+								h1.home__title!= "Retrouvez le bon goût d’une recette naturelle"
+								p.home__desc!= "Placez uniquement les bons ingrédients pour retrouver la vraie recette de la Mayonnaise Vandemoortele et gagnez lorem ipsum dolor sit amet! Consectetur adipiscing elit, sed tempor incididunt ut labore."
+								.home__btn-wrapper
+									a.home__btn(href="#" class="" title="")!= "Je joue !"
+							.home__content--congrats
+								h1.home__title!= "Félicitations !"
+								p.home__desc!= "Vous n’êtes pas tombé dans nos mayo-pièges et avez retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle !"
+								.home__btn-wrapper
+									a.home__btn(href="#" class="" title="")!= "Je récupère ma récompense"
+							.home__content--thanks
+								h4.home__badge!= "lorem ipsum"
+								h1.home__title!= "merci !"
+								p.home__desc!= "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo incididunt ut labore et dolore magna aliqua ut enim minim."
+								.home__btn-wrapper
+									a.home__btn(href="#" class="" title="")!= "Je partage !"
+							.home__content--end
+								h1.home__title!= "Game over"
+								p.home__desc!= "Vous êtes tombé dans nos mayo-pièges et vous n’avez pas retrouvé tous les ingrédients de notre Mayonnaise 100% naturelle. Retentez votre chance !"
+								.home__btn-wrapper
+									a.home__btn(href="#" class="" title="")!= "Je retente ma chance !"
 
 					.home__content-bottom
-						img(align="bottom" src="img/img-bottle-main.png" srcset="img/img-bottle-main@2x.png 2x" alt="" title="")
+						.home__content--home
+							img(src="img/img-bottle-main.png" srcset="img/img-bottle-main@2x.png 2x" alt="" title="")
+						.home__content--congrats
+							img(src="img/img-bottle-additional.png" srcset="img/img-bottle-additional@2x.png 2x" alt="" title="")
+						.home__content--thanks
+							img(src="img/img-bottle-additional.png" srcset="img/img-bottle-additional@2x.png 2x" alt="" title="")
+						.home__content--end
+							img(src="img/img-bottle-additional-1.png" srcset="img/img-bottle-additional-1@2x.png 2x" alt="" title="")
 
 				.home__footer
 

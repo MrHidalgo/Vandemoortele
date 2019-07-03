@@ -2,16 +2,16 @@
 
 .logo {
 	display: flex;
-	@include adaptive(767) {
-		margin-top: 100px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-		margin-top: 100px;
-		margin-left: auto;
-		margin-right: auto;
-	}
+	//@include adaptive(767) {
+	//	margin-top: 100px;
+	//	margin-left: auto;
+	//	margin-right: auto;
+	//}
+	//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+	//	margin-top: 100px;
+	//	margin-left: auto;
+	//	margin-right: auto;
+	//}
 
 	&__btn {
 		width: 200px;
@@ -28,16 +28,16 @@
 .lang {
 	display: flex;
 	align-items: center;
-	@include adaptive(767) {
-		position: absolute;
-		top: 25px;
-		right: 15px;
-	}
-	@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-		position: absolute;
-		top: 25px;
-		right: 15px;
-	}
+	//@include adaptive(767) {
+	//	position: absolute;
+	//	top: 25px;
+	//	right: 15px;
+	//}
+	//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+	//	position: absolute;
+	//	top: 25px;
+	//	right: 15px;
+	//}
 
 	&__btn {
 		display: flex;
@@ -64,9 +64,9 @@
 		&:hover {
 			background-color: rgba(#41ad4a, 0.75);
 			@include transition(background-color);
-			@include adaptive(767) {
-				background-color: #dbd1b6;
-			}
+			//@include adaptive(767) {
+			//	background-color: #dbd1b6;
+			//}
 		}
 
 		&:active {
@@ -92,12 +92,12 @@
 .link {
 	display: flex;
 	align-items: center;
-	@include adaptive(767) {
-		flex-wrap: wrap;
-	}
-	@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-		flex-wrap: wrap;
-	}
+	//@include adaptive(767) {
+	//	flex-wrap: wrap;
+	//}
+	//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+	//	flex-wrap: wrap;
+	//}
 
 	&__btn {
 		overflow: hidden;
@@ -108,20 +108,20 @@
 			font-size: 12px;
 			text-align: left;
 		}
-		@include adaptive(639) {
-			color: #ffffff;
-		}
-		@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-			color: #ffffff;
-		}
+		//@include adaptive(639) {
+		//	color: #ffffff;
+		//}
+		//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+		//	color: #ffffff;
+		//}
 
 		&-1 {
-			@include adaptive(767) {
-				width: 100%;
-			}
-			@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-				width: 100%;
-			}
+			//@include adaptive(767) {
+			//	width: 100%;
+			//}
+			//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+			//	width: 100%;
+			//}
 		}
 
 		&:hover {
@@ -148,12 +148,12 @@
 		margin-left: 10px;
 		margin-right: 10px;
 		color: #006023;
-		@include adaptive(639) {
-			color: #ffffff;
-		}
-		@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-			color: #ffffff;
-		}
+		//@include adaptive(639) {
+		//	color: #ffffff;
+		//}
+		//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+		//	color: #ffffff;
+		//}
 	}
 }
 
@@ -168,22 +168,22 @@
 		@include adaptive(1023) {
 			font-size: 16px;
 		}
-		@include adaptive(767) {
-			flex-direction: column;
-			align-items: flex-end;
-			font-size: 12px;
-			text-align: right;
-		}
-		@include adaptive(639) {
-			color: #ffffff;
-		}
-		@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-			flex-direction: column;
-			align-items: flex-end;
-			font-size: 12px;
-			text-align: right;
-			color: #ffffff;
-		}
+		//@include adaptive(767) {
+		//	flex-direction: column;
+		//	align-items: flex-end;
+		//	font-size: 12px;
+		//	text-align: right;
+		//}
+		//@include adaptive(639) {
+		//	color: #ffffff;
+		//}
+		//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+		//	flex-direction: column;
+		//	align-items: flex-end;
+		//	font-size: 12px;
+		//	text-align: right;
+		//	color: #ffffff;
+		//}
 
 		span {
 			font-weight: bold;
@@ -194,12 +194,12 @@
 			position: relative;
 			margin-left: 5px;
 			color: #006023;
-			@include adaptive(639) {
-				color: #ffffff;
-			}
-			@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-				color: #ffffff;
-			}
+			//@include adaptive(639) {
+			//	color: #ffffff;
+			//}
+			//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+			//	color: #ffffff;
+			//}
 
 			&:hover {
 				&:after {
@@ -218,12 +218,12 @@
 				height: 1px;
 				background-color: #006023;
 				@include transition(transform);
-				@include adaptive(639) {
-					background-color: #ffffff;
-				}
-				@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
-					background-color: #ffffff;
-				}
+				//@include adaptive(639) {
+				//	background-color: #ffffff;
+				//}
+				//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
+				//	background-color: #ffffff;
+				//}
 			}
 		}
 	}
@@ -241,24 +241,24 @@
 	min-height: 130px;
 	padding: 15px 50px;
 	background-color: rgba(#235f25, 0.90);
-	@include adaptive(767) {
-		padding-left: 30px;
-		padding-right: 30px;
-	}
-	@include adaptive(639) {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+	//@include adaptive(767) {
+	//	padding-left: 30px;
+	//	padding-right: 30px;
+	//}
+	//@include adaptive(639) {
+	//	flex-direction: column;
+	//	align-items: center;
+	//	justify-content: center;
+	//}
 
 	&__left {
 		flex: 1;
 		min-width: 1px;
 		max-width: 100%;
 		padding-right: 15px;
-		@include adaptive(639) {
-			padding-right: 0;
-		}
+		//@include adaptive(639) {
+		//	padding-right: 0;
+		//}
 	}
 
 	&__right {
@@ -266,9 +266,9 @@
 		justify-content: flex-end;
 		width: 100%;
 		max-width: 165px;
-		@include adaptive(639) {
-			justify-content: center;
-		}
+		//@include adaptive(639) {
+		//	justify-content: center;
+		//}
 	}
 
 	p {
@@ -277,13 +277,13 @@
 		padding-right: 15px;
 		color: #ffffff;
 		font-size: 18px;
-		@include adaptive(639) {
-			font-size: 16px;
-		}
-		@include adaptive(639) {
-			text-align: center;
-			padding-bottom: 15px;
-		}
+		//@include adaptive(639) {
+		//	font-size: 16px;
+		//}
+		//@include adaptive(639) {
+		//	text-align: center;
+		//	padding-bottom: 15px;
+		//}
 	}
 
 	a {
@@ -301,11 +301,11 @@
 		text-transform: uppercase;
 		font-family: 'Frankfurter', sans-serif;
 		@include transition(background-color, color);
-		@include adaptive(639) {
-			font-size: 22px;
-			max-width: 135px;
-			height: 43px;
-		}
+		//@include adaptive(639) {
+		//	font-size: 22px;
+		//	max-width: 135px;
+		//	height: 43px;
+		//}
 
 		&:hover {
 			background-color: transparent;

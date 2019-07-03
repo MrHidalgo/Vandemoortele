@@ -210,6 +210,23 @@
 		}
 	}
 }
+@mixin fluidDepHeight($properties, $min-vh, $max-vh, $min-value, $max-value) {
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
+
+	@media screen and (min-height: $min-vh) {
+		@each $property in $properties {
+			#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vh - #{$min-vh}) / #{strip-unit($max-vh - $min-vh)});
+		}
+	}
+
+	@media screen and (min-height: $max-vh) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}
 
 
 ///
