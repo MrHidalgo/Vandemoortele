@@ -109,9 +109,9 @@
 		@include respond(medium) {
 			@include fluidDepHeight(padding-top, 290px, 812px, 15px, 40px);
 		}
-		//@include adaptive(767) {
-		//	padding-top: 0;
-		//}
+		@include adaptive(767) {
+			padding-top: 0;
+		}
 		//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
 		//	padding-top: 0;
 		//}
@@ -123,9 +123,12 @@
 		@include respond(medium) {
 			@include fluidDepHeight(padding-bottom, 290px, 768px, 15px, 55px);
 		}
-		//@include adaptive(767) {
-		//	padding-bottom: 25px;
-		//}
+		@include adaptive(767) {
+			padding-bottom: 25px;
+		}
+		@include adaptive(575) {
+			padding-bottom: 15px;
+		}
 		//@media screen and (max-width: 639px) {
 		//	padding-top: 15px;
 		//	padding-bottom: 15px;
@@ -147,11 +150,18 @@
 		height: 100vh;
 		margin-left: auto;
 		margin-right: auto;
-		//@include adaptive(767) {
-		//	max-width: 510px;
-		//	transform: translateY(187px);
-		//	height: calc(100vh - 187px);
-		//}
+		@include adaptive(767) {
+			overflow: hidden;
+			max-width: 510px;
+			transform: translateY(187px);
+			height: calc(100vh - 187px);
+		}
+		@include adaptive(575) {
+			//display: block;
+			transform: translateY(118px);
+			height: calc(100vh - 118px);
+		}
+
 		//@media screen and (max-width: 639px) {
 		//	overflow: hidden;
 		//	transform: translateY(0);
@@ -199,14 +209,18 @@
 		&-top {
 			max-height: 390px;
 			//padding-bottom: 30px;
-			//@include adaptive(767) {
-			//	display: flex;
-			//	align-items: center;
-			//	justify-content: center;
-			//	height: 80px;
-			//	max-height: unset;
-			//	padding-bottom: 0;
-			//}
+			@include adaptive(767) {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 80px;
+				max-height: unset;
+				padding-bottom: 0;
+			}
+			@include adaptive(767) {
+				height: 50px;
+				min-height: 50px;
+			}
 			//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
 			//	display: flex;
 			//	align-items: center;
@@ -218,9 +232,9 @@
 
 			img {
 				bottom: 0;
-				//@include adaptive(767) {
-				//	display: none;
-				//}
+				@include adaptive(767) {
+					display: none;
+				}
 				//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
 				//	display: none;
 				//}
@@ -233,6 +247,9 @@
 			//height: 350px;
 			padding-top: 30px;
 			padding-bottom: 30px;
+			@include adaptive(767) {
+				padding: 15px;
+			}
 			//@media screen and (max-width: 639px) {
 			//	height: auto;
 			//}
@@ -248,12 +265,19 @@
 			justify-content: center;
 			//padding-top: 30px;
 			max-height: 313px;
-			//@include adaptive(767) {
-			//	height: calc(100% - (350px + 80px));
-			//}
-			//@media screen and (max-width: 639px) {
-			//	height: auto;
-			//}
+			@include adaptive(767) {
+				//height: calc(100% - (350px + 80px));
+				//@include fluid(padding-left padding-right, 290px, 767px, 75px, 75px);
+				@include fluid(max-width, 290px, 639px, 75px, 575px);
+			}
+			@include adaptive(575) {
+				//height: 100%;
+				//max-height: 170px;
+				width: 100%;
+				margin: 0 auto;
+				height: auto;
+				max-height: unset;
+			}
 			//@media screen and (max-width: 767px) and (max-height: 720px){
 			//	height: auto;
 			//	max-height: unset;
@@ -262,21 +286,14 @@
 			//	height: calc(100% - (350px + 80px));
 			//}
 
-			&--offsetImg {
-				max-height: 509px;
-
-				img {
-					left: 40px;
-				}
-			}
-
 			img {
 				top: 0;
-				//@include adaptive(575) {
-				//	display: block;
-				//	max-width: 100%;
-				//	height: auto;
-				//}
+				@include adaptive(575) {
+					position: static;
+					display: block;
+					max-width: 100%;
+					height: auto;
+				}
 			}
 		}
 	}
@@ -296,6 +313,9 @@
 		@include respond(medium) {
 			@include fluidDepHeight(font-size, 290px, 812px, 12px, 20px);
 		}
+		@include adaptive(767) {
+			@include fluid(font-size, 290px, 767px, 8px, 18px);
+		}
 		//@include fluid(font-size, 320px, 1366px, 16px, 20px);
 	}
 
@@ -308,7 +328,12 @@
 		@include respond(medium) {
 			@include fluidDepHeight(font-size, 290px, 812px, 20px, 40px);
 		}
-		//@include fluid(font-size, 320px, 1366px, 33px, 40px);
+		@include adaptive(767) {
+			@include fluid(font-size, 290px, 767px, 14px, 36px);
+		}
+		@include adaptive(575) {
+			@include fluid(padding-bottom, 290px, 575px, 8px, 15px);
+		}
 	}
 
 	&__desc {
@@ -317,7 +342,11 @@
 		color: #282828;
 		font-size: 18px;
 		@include respond(medium) {
-			@include fluidDepHeight(font-size, 290px, 812px, 14px, 18px);
+			@include fluidDepHeight(font-size, 290px, 812px, 12px, 18px);
+		}
+		@include adaptive(767) {
+			@include fluid(padding-bottom, 290px, 767px, 10px, 30px);
+			@include fluid(font-size, 290px, 767px, 9px, 18px);
 		}
 	}
 
@@ -331,10 +360,13 @@
 			@include fluidDepHeight(padding-top padding-bottom, 290px, 812px, 30px, 70px);
 			@include fluidDepHeight(font-size, 290px, 812px, 14px, 20px);
 		}
-		//@include adaptive(767) {
-		//	padding-top: 15px;
-		//	padding-bottom: 15px;
-		//}
+		@include adaptive(767) {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		@include adaptive(576) {
+			font-size: 16px;
+		}
 		//@media screen and (orientation: landscape) and (max-width: 812px) and (max-height: 414px) {
 		//	padding-top: 15px;
 		//	padding-bottom: 15px;
@@ -361,6 +393,15 @@
 			@include fluidDepHeight(min-width, 290px, 812px, 200px, 260px);
 			@include fluidDepHeight(height, 290px, 812px, 35px, 50px);
 			@include fluidDepHeight(font-size, 290px, 812px, 14px, 20px);
+		}
+		@include adaptive(575) {
+			max-width: 200px;
+			height: 35px;
+			font-size: 16px;
+			@include fluid(max-width, 290px, 575px, 175px, 200px);
+			@include fluid(height, 290px, 575px, 30px, 35px);
+			@include fluid(padding-left padding-right, 290px, 575px, 15px, 30px);
+			@include fluid(font-size, 290px, 575px, 12px, 16px);
 		}
 		//@include adaptive(639) {
 		//	font-size: 18px;

@@ -7,12 +7,12 @@ PageList:
 - file: index-badge.html
   titleName: Home with cookie
   ready: 95
-- file: congrats.html
-  titleName: Congrats
-  ready: 95
-- file: thanks.html
-  titleName: Thanks
-  ready: 95
-- file: end.html
-  titleName: Game Over
-  ready: 95
+#- file: congrats.html
+#  titleName: Congrats
+#  ready: 95
+#- file: thanks.html
+#  titleName: Thanks
+#  ready: 95
+#- file: end.html
+#  titleName: Game Over
+#  ready: 95
